@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="cart-item">
+            <td>Coat</td>
+            <td>
+                $200
+            </td>
+            <td class="price">
+                <button class="quantity-btn" onclick="handleQuantityButtonClick(this, 'decrement', 'coat-quantity')">-</button>
+              <div id="coat-quantity" class="quantity">0</div>
+              <button class="quantity-btn" onclick="handleQuantityButtonClick(this, 'increment', 'coat-quantity')">+</button></td>
+          </tr>
+          <tr class="cart-item">
+            <td>Jeans</td>
+            <td>
+                $100
+            </td>
+            <td class="price">
+                <button class="quantity-btn" onclick="handleQuantityButtonClick(this, 'decrement', 'jeans-quantity')">-</button>
+                <div id="jeans-quantity" class="quantity">0</div>
+                <button class="quantity-btn" onclick="handleQuantityButtonClick(this, 'increment', 'jeans-quantity')">+</button></td>
+          </tr>
+        </tbody>
+    </table>
+    <p id="total-price">Total to pay: $0</p>
+    <script src="script.js"></script>
+</body>
+</html>
